@@ -1,0 +1,74 @@
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #121212;
+        font-family: Arial, sans-serif;
+    }
+    #name {
+        color: white;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    #display{
+        color: white;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 70px);
+        gap: 12px;
+        padding: 20px;
+        background: #1e1e1e;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    button {
+        height: 65px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #2c2c2c;
+        color: white;
+        transition: all 0.2s ease;
+    }
+
+    button:hover {
+        background: #444;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    /* Operator buttons (+ - * /) */
+    button:nth-child(4),
+    button:nth-child(8),
+    button:nth-child(12),
+    button:nth-child(14) {
+        background: #ff9500;
+        color: white;
+    }
+
+    button:nth-child(4):hover,
+    button:nth-child(8):hover,
+    button:nth-child(12):hover,
+    button:nth-child(14):hover {
+        background: #e08900;
+    }
+
+    /* Equal button */
+    button:last-child {
+        grid-column: span 2;
+        background: #28a745;
+        color: white;
+    }
+
+    button:last-child:hover {
+        background: #218838;
+    }
